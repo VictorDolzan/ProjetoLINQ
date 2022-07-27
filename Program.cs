@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ProjetoLINQ.LojaDominio.Entidades;
 
 namespace ProjetoLINQ
 {
@@ -34,14 +35,25 @@ namespace ProjetoLINQ
 
             // Console.ReadKey();
 
-            string[] cores = {"Preto", "Branco", "Verde", "Vermelho", "Azul"};
+            // string[] cores = {"Preto", "Branco", "Verde", "Vermelho", "Azul"};
 
-            var resultadoCores = cores.Where(x => x.Contains("e") || x.Contains("z"));
+            // var resultadoCores = cores.Where(x => x.Contains("e") || x.Contains("z"));
 
-            foreach (var c in resultadoCores)
+            // foreach (var c in resultadoCores)
+            // {
+            //     Console.WriteLine(c);
+            // }
+
+            var produto = new Produto();
+
+            var produtos = produto.Listar();
+
+            foreach (var itemP in produtos)
             {
-                Console.WriteLine(c);
+                Console.WriteLine(itemP.Nome);
             }
+
+            Console.ReadKey();
         }
     }
 }
