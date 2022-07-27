@@ -44,14 +44,20 @@ namespace ProjetoLINQ
             //     Console.WriteLine(c);
             // }
 
-            var produto = new Produto();
+            // var produto = new Produto();
 
-            var produtos = produto.Listar();
+            // var produtos = produto.Listar().Where(p => p.Valor > 4).OrderBy(x => x.Valor);
 
-            foreach (var itemP in produtos)
+            // foreach (var itemP in produtos)
+            // {
+            //     Console.WriteLine(itemP.Nome);
+            // }
+
+            new Produto().Listar().Where(p => p.Valor > 4).ToList().ForEach(i => 
             {
-                Console.WriteLine(itemP.Nome);
-            }
+                Console.WriteLine(i.Nome);
+                Console.WriteLine(i.Valor);
+            });
 
             Console.ReadKey();
         }

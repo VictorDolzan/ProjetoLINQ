@@ -28,24 +28,24 @@ namespace ProjetoLINQ.LojaDominio.Entidades
             {
                 Id = Guid.NewGuid(),
                 Nome = "Morango",
-                Quantidade = 25,
-                Valor = 5,
+                Quantidade = 4,
+                Valor = 25,
                 DataVencimento = DateTime.Now.AddDays(2)
             });
             _produtos.Add(new Produto()
             {
                 Id = Guid.NewGuid(),
                 Nome = "Pera",
-                Quantidade = 12,
-                Valor = 5,
+                Quantidade = 2,
+                Valor = 12,
                 DataVencimento = DateTime.Now.AddDays(3)
             });
             _produtos.Add(new Produto()
             {
                 Id = Guid.NewGuid(),
                 Nome = "Abacaxi",
-                Quantidade = 4,
-                Valor = 5,
+                Quantidade = 1,
+                Valor = 4,
                 DataVencimento = DateTime.Now.AddDays(4)
             });
             _produtos.Add(new Produto()
